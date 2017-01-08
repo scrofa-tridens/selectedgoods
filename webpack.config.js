@@ -12,7 +12,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				loader: "babel",
+				loader: "babel-loader",
 				test: /.jsx?$/,
 				include: [__dirname + "/src"],
 				query: {

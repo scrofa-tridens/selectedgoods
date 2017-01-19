@@ -220,13 +220,17 @@ class Good extends React.Component {
 			{this.state.picS}
 		</Link>
 	}
+	{/* Название */}
 	{g.name && <h3><Link href={g.url}>{g.name}</Link></h3>}
+	{/* Краткое описание */}
 	{g.review && (!d.isShowDescr || d.isShowDescr != 0) &&
 		<p>
 			{g.review}
 			{g.url && <a href={g.url} style={{display: "block"}}>Подробнее…</a>}
 		</p>
 	}
+	{/* Количество отзывов */}
+	{g.reports > 0 && d.reports != 0 && <p>Отзывов: {g.reports}</p>}
 	{/* Дальше всякие цены, характеристики, отзывы и пр., но это уже рутина; позже. */}
 </div>
 
